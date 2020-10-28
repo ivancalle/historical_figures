@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  python-test:
+    # build: .
+    image: ivancallegil/historical_figures
+    container_name: figures
+    environment:
+      - MONGODB_DSN=mongodb://db/figures
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+
+  db:
+    image: mongo:4.4-bionic
+    container_name: mongo_db
+
