@@ -56,3 +56,12 @@ $docker-compose up python-test
 ## API docs
 
 If you want to see the API docs you can go to http://localhost:8000/docs (or :8080 with docker).
+
+
+## Run tests 
+
+For run tests you can execute next command(only without docker):
+
+```
+./setup.py pytest
+```
